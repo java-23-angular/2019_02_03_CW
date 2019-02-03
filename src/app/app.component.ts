@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Java23190203CW';
+
+  onClick(obj:{name:string}): void{
+    console.log("Clicked" + obj);
+  }
 }
