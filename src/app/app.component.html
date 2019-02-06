@@ -3,4 +3,11 @@
 <!--<my-form></my-form>-->
 <!--<div my-form></div>-->
 <!--<div class="my-form"></div>-->
-<app-my-comp (myEvent)="onClick($event)"></app-my-comp>
+<!--<app-my-comp (myEvent)="onClick($event)"></app-my-comp>-->
+<app-my-comp (userInput)="addRow($event)"></app-my-comp>
+<br/>
+<hr>
+<ul class="list-group">
+  <app-my-row *ngFor="let user of arr" [rowUser]="user" ></app-my-row>
+</ul>
+<button class="btn btn-primary" (click)="changeArr()">Change first</button>

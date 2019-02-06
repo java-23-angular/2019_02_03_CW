@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Java23190203CW';
+  arr: Array<{name:string,lastName:string}> = [];
 
-  onClick(obj:{name:string}): void{
-    console.log("Clicked" + obj);
+  onClick(obj: { name: string }): void {
+    console.log('Clicked' + obj.name);
+  }
+
+  addRow(row: {name:string,lastName:string}): void {
+    this.arr.push(row);
+  }
+
+  changeArr() {
+    this.arr[0].name = 'Super name';
   }
 }
